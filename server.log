@@ -1,0 +1,18 @@
+2022-04-24 15:44:03.867  INFO 80163 --- [main] c.z.backend.ScanRobotBackendApplication  : Starting ScanRobotBackendApplication using Java 1.8.0_202 on lzx_mac with PID 80163 (/Users/liuzhuoxuan/IdeaProjects/scan-robot-backend/target/classes started by liuzhuoxuan in /Users/liuzhuoxuan/IdeaProjects/scan-robot-backend)
+2022-04-24 15:44:03.871  INFO 80163 --- [main] c.z.backend.ScanRobotBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2022-04-24 15:44:06.420  INFO 80163 --- [main] c.z.backend.ScanRobotBackendApplication  : Started ScanRobotBackendApplication in 3.014 seconds (JVM running for 3.602)
+2022-04-24 15:45:04.005  INFO 80177 --- [main] c.z.backend.ScanRobotBackendApplication  : Starting ScanRobotBackendApplication using Java 1.8.0_202 on lzx_mac with PID 80177 (/Users/liuzhuoxuan/IdeaProjects/scan-robot-backend/target/classes started by liuzhuoxuan in /Users/liuzhuoxuan/IdeaProjects/scan-robot-backend)
+2022-04-24 15:45:04.014  INFO 80177 --- [main] c.z.backend.ScanRobotBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2022-04-24 15:45:06.325  INFO 80177 --- [main] c.z.backend.ScanRobotBackendApplication  : Started ScanRobotBackendApplication in 3.081 seconds (JVM running for 3.717)
+2022-04-24 15:45:47.902  INFO 80194 --- [main] c.z.backend.ScanRobotBackendApplication  : Starting ScanRobotBackendApplication using Java 1.8.0_202 on lzx_mac with PID 80194 (/Users/liuzhuoxuan/IdeaProjects/scan-robot-backend/target/classes started by liuzhuoxuan in /Users/liuzhuoxuan/IdeaProjects/scan-robot-backend)
+2022-04-24 15:45:47.906  INFO 80194 --- [main] c.z.backend.ScanRobotBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2022-04-24 15:45:50.491  INFO 80194 --- [main] c.z.backend.ScanRobotBackendApplication  : Started ScanRobotBackendApplication in 3.06 seconds (JVM running for 3.711)
+2022-04-24 16:46:43.683  INFO 80887 --- [main] c.z.backend.service.TestService          : Starting TestService using Java 1.8.0_202 on lzx_mac with PID 80887 (started by liuzhuoxuan in /Users/liuzhuoxuan/IdeaProjects/scan-robot-backend)
+2022-04-24 16:46:43.688  INFO 80887 --- [main] c.z.backend.service.TestService          : No active profile set, falling back to 1 default profile: "default"
+2022-04-24 16:46:48.779  INFO 80887 --- [main] c.z.backend.service.TestService          : Started TestService in 5.952 seconds (JVM running for 7.829)
+2022-04-24 16:47:45.139  INFO 80902 --- [main] c.z.backend.service.TestService          : Starting TestService using Java 1.8.0_202 on lzx_mac with PID 80902 (started by liuzhuoxuan in /Users/liuzhuoxuan/IdeaProjects/scan-robot-backend)
+2022-04-24 16:47:45.141  INFO 80902 --- [main] c.z.backend.service.TestService          : No active profile set, falling back to 1 default profile: "default"
+2022-04-24 16:47:51.447  INFO 80902 --- [main] c.z.backend.service.TestService          : Started TestService in 6.783 seconds (JVM running for 8.638)
+2022-04-24 16:47:52.126  INFO 80902 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-04-24 16:47:53.158  INFO 80902 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-04-24 16:47:53.168  INFO 80902 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

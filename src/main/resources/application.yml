@@ -1,0 +1,34 @@
+server:
+  port: 3000
+
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/scan_robot?Timezone=UTC
+      username: zhuoxuanliu
+      password: 123456
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+logging:
+  file:
+    name: server.log
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+      file-name-pattern: server-%d{yyyy-MM-dd}-%i.log
+  group:
+    backend: com.zhuoxuanliu
+  level:
+    root: info
+    backend: info
+
+server-config:
+  ip-address: 127.0.0.1
+  port: 8080
