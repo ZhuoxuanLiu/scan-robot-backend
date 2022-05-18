@@ -1,5 +1,6 @@
 package com.zhuoxuanliu.backend;
 
+import com.zhuoxuanliu.backend.socket.NettyServer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;

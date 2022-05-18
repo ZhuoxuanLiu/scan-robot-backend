@@ -20,7 +20,7 @@ logging:
   file:
     name: server.log
   logback:
-    rollingpolicy:
+    rolling policy:
       max-file-size: 10MB
       file-name-pattern: server-%d{yyyy-MM-dd}-%i.log
   group:
@@ -32,3 +32,7 @@ logging:
 server-config:
   ip-address: 127.0.0.1
   port: 8080
+
+netty:
+  port: 1254
+
