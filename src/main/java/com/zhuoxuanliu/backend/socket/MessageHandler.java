@@ -17,7 +17,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class MessageHandler extends SimpleChannelInboundHandler<TextWebSocketFrame> {
 
-
     //GlobalEventExecutor.INSTANCE 是全局的事件执行器，是一个单例
     private static final ChannelGroup channelGroup=  new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);
 
@@ -41,7 +40,7 @@ public class MessageHandler extends SimpleChannelInboundHandler<TextWebSocketFra
         if (msg instanceof FullHttpRequest){
             FullHttpRequest request =(FullHttpRequest) msg;
             //获取用户参数
-            Integer userId = getUrlParams(request.uri());
+            Integer userId = getUrlParams(request.content());
             //保存到登录信息map
             if (userId != null) userMap.put(userId,ctx.channel().id());
 
@@ -88,7 +87,7 @@ public class MessageHandler extends SimpleChannelInboundHandler<TextWebSocketFra
 
     }
 
-    private static Integer getUrlParams(String url) {
+    private static Integer getRequestParams(String url) {
         if (!url.contains("/user/")) {
             return null;
         }
