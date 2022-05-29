@@ -3,6 +3,8 @@ package com.zhuoxuanliu.backend.socket;
 
 import lombok.Data;
 
+import java.util.Map;
+
 @Data
 public class SocketMessage {
 
@@ -11,12 +13,12 @@ public class SocketMessage {
      */
     private String messageType;
     /**
-     * 消息id
+     * 消息username
      */
-    private Integer id;
+    private String username;
     /**
      * 消息内容
      */
-    private String message;
+    private Map<String, String> message;
 
 }

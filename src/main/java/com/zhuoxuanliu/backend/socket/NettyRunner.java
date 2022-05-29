@@ -6,21 +6,17 @@ import org.springframework.stereotype.Component;
 
 
 @Component
-public class NettyInitListen implements CommandLineRunner {
+public class NettyRunner implements CommandLineRunner {
 
     //netty服务端口，配置文件中为1254
     @Value("${netty.port}")
     Integer nettyPort;
-    //springboot服务端口 8080
-    @Value("${server-config.port}")
-    Integer serverPort;
 
     @Override
     public void run(String... args) throws Exception {
         try {
-            System.out.println("nettyServer starting ...");
-            System.out.println("http://127.0.0.1:" + serverPort);
-            new NettyServer(nettyPort).start();
+            NettyServer nettyServer = new NettyServer(nettyPort);
+            new Thread(nettyServer::start).start();
         } catch (Exception e) {
             System.out.println("NettyServerError:" + e.getMessage());
         }

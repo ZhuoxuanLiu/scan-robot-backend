@@ -5,9 +5,17 @@ spring:
   datasource:
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/scan_robot?Timezone=UTC
-      username: zhuoxuanliu
+      url: jdbc:mysql://localhost:3306/robot?Timezone=UTC
+      username: root
       password: 123456
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: 123456
+    virtual-host: /
+  resources:
+
 
 mybatis-plus:
   global-config:
@@ -29,10 +37,8 @@ logging:
     root: info
     backend: info
 
-server-config:
-  ip-address: 127.0.0.1
-  port: 8080
-
 netty:
   port: 1254
 
+my-rabbit-queues:
+  name: info_card,scan_status,picture,error
