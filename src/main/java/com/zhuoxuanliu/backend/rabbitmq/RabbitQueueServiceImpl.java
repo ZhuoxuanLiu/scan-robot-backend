@@ -4,7 +4,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.DirectExchange;
 import org.springframework.amqp.core.Queue;
-import org.springframework.amqp.rabbit.config.SimpleRabbitListenerContainerFactory;
 import org.springframework.amqp.rabbit.config.SimpleRabbitListenerEndpoint;
 import org.springframework.amqp.rabbit.core.RabbitAdmin;
 import org.springframework.amqp.rabbit.listener.*;
@@ -65,10 +64,8 @@ public class RabbitQueueServiceImpl implements RabbitQueueService{
     public boolean checkQueueExistOnListener(String listenerId, String queueName) {
         try {
             log.info("checking queueName : " + queueName + " on listener id : " + listenerId);
-            if (rabbitListenerEndpointRegistry.getListenerContainer(listenerId) != null) {
-                AbstractMessageListenerContainer abstractMessageListenerContainer =
-                        (AbstractMessageListenerContainer) rabbitListenerEndpointRegistry.getListenerContainer(listenerId);
-                String[] queueNames = abstractMessageListenerContainer.getQueueNames();
+            if (getMessageListenerContainerById(listenerId) != null) {
+                String[] queueNames = getMessageListenerContainerById(listenerId).getQueueNames();
                 if (queueNames.length > 0) {
                     for (String name : queueNames) {
                         if (name.equals(queueName)) {
@@ -87,7 +84,6 @@ public class RabbitQueueServiceImpl implements RabbitQueueService{
             return false;
         }
     }
-
     private AbstractMessageListenerContainer getMessageListenerContainerById(String listenerId) {
         return (AbstractMessageListenerContainer) rabbitListenerEndpointRegistry.getListenerContainer(listenerId);
     }
